@@ -27,8 +27,12 @@ public class ExpressionTreeTest {
 
 		N5 = new OperatorNode(OperatorType.PLUS, null, N3, N4);
 		
-		ExpressionTree T = new ExpressionTree(N5);
 		
+		
+		ExpressionTree T = new ExpressionTree(N5);
+		//New thingy
+		System.out.println(T.validateBST());
+		///
 		System.out.println("Expression String: " + T);
 
 		System.out.println("Expression: " + T.getValue());
@@ -38,8 +42,44 @@ public class ExpressionTreeTest {
 		System.out.println("Expression String: " + T);
 
 		System.out.println("Expression: " + T.getValue());
+		//New Thingy
+		System.out.println(T.validateBST());
+		///
+		
+		
+		
 
+		// evaluate (2 - 10) + (2 * 5)
+	
 
+		N1 = new ValueNode(4, null);
+		N2 = new ValueNode(5, null);
+		N3 = new OperatorNode(OperatorType.PLUS, null, N1, N2);
+		
+		N1 = new ValueNode(2, null);
+		N2 = new ValueNode(5, null);;
+		N4 = new OperatorNode(OperatorType.MULT, null, N1, N2);
+
+		N5 = new OperatorNode(OperatorType.PLUS, null, N3, N4);
+		
+		
+		
+		T = new ExpressionTree(N5);
+		//New thingy
+		System.out.println(T.validateBST());
+		///
+		System.out.println("Expression String: " + T);
+
+		System.out.println("Expression: " + T.getValue());
+		
+		N6 = new OperatorNode(OperatorType.MULT, null, N5, N4);
+		T = new ExpressionTree(N6);
+		System.out.println("Expression String: " + T);
+
+		System.out.println("Expression: " + T.getValue());
+		//New Thingy
+		System.out.println(T.validateBST());
+		///
 	}
 
 }
